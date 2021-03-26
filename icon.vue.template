@@ -1,0 +1,28 @@
+<!-- 由 vue-icon-component-generator 生成，请勿更改 -->
+<!-- view in github: https://github.com/fusee-code-lab/vue-icon-component-generator -->
+<!-- eslint-disable -->
+<template>
+  <span class="$FONT_NAME$ $CLASS$"></span>
+</template>
+
+<script lang="ts">
+import { defineComponent } from 'vue';
+
+export default defineComponent({
+  name: "$NAME$"
+});
+</script>
+
+<style scoped>
+.$FONT_NAME$ {
+  font-family: "$FONT_NAME$" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.$CLASS$:before {
+  content: "$UNICODE$";
+}
+</style>
