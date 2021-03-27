@@ -37,10 +37,11 @@ def generate(path: str, target_dir: str):
 
         with TTFont(abs_path) as font:
             cmap: dict[str, int] = font.getBestCmap()
-            eachContent = content
             for (code, name) in cmap.items():
+                eachContent = content
                 uni_code = chr(code).encode(
-                    'raw_unicode_escape').decode("utf-8")
+                    'raw_unicode_escape').decode("utf-8").replace("\\u", "\\")
+
                 class_name = "{font}-{name}".format(font=font_name, name=name)
                 component_name = "{font}-icon-{name}".format(
                     font=font_name, name=name)
