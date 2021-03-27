@@ -5,9 +5,7 @@ from pathlib import Path
 
 # TODO 生成 css fontfamily
 # TODO 检测文件是否为空
-
-templatePath: str = os.path.abspath("./icon.vue.template")
-
+templatePath = str(Path(__file__).parent.joinpath("./icon.vue.template"))
 
 def to_abs_path(path: str) -> str:
     abs_path: str = ""
